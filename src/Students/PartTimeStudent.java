@@ -14,20 +14,30 @@ public class PartTimeStudent extends Student
     }
     
     /**
-     * Method to calculate the total course fee
+     * Method which determines amount of courses and calculates fee
      * @return 
      */
     @Override
     public double calculateCourseFee()
     {
+        //selection statement that will determine the fee
         if(super.getCourseCount() >0 && super.getCourseCount() < 2)
         {
             super.setCourseFee(700.00);
         }
-        else if(super.getCourseCount() >0 && super.getCourseCount() < 2)
+        else if(super.getCourseCount() >1 && super.getCourseCount() < 3)
         {
-            super.setCourseFee(800.00);
+            super.setCourseFee(650.00);
         }
+        else if(super.getCourseCount() >2 && super.getCourseCount() < 4)
+        {
+            super.setCourseFee(600.00);
+        }
+        else if(super.getCourseCount() >3)
+        {
+            super.setCourseFee(500.00);
+        }
+        //return the calculated fee
         return super.getCourseFee()*super.getCourseCount();
     }
 }
