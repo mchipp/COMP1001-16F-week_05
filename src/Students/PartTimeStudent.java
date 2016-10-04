@@ -11,4 +11,10 @@ public class PartTimeStudent extends Student
     {
         super(firstName,lastName,address,phoneNumber,year,month,day);
     }
+    
+    @Override
+    public double calculateCourseFee()
+    {
+        return super.getCourseFee()*super.getCourseCount();
+    }
 }
