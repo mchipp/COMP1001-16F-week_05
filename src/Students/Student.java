@@ -51,11 +51,29 @@ public abstract class Student
     }
     
     /**
-     * Method to set the course fee
+     * Method to get the course fee
      * @return 
      */
     public int getCourseCount()
     {
         return courseCount;
+    }
+    
+    /**
+     * Method to set the course fee 
+     * @param fee
+     */
+    public void setCourseFee(double fee)
+    {
+        courseFee = fee;
+    }
+    
+    /**
+     * Method to set the course count 
+     * @param count
+     */
+    public void setCourseCount(int count)
+    {
+        courseCount = count;
     }
 }

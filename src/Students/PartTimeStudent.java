@@ -7,9 +7,10 @@ package Students;
 public class PartTimeStudent extends Student
 {
     public PartTimeStudent(String firstName, String lastName, String address,
-            String phoneNumber, int year, int month, int day)
+            String phoneNumber, int year, int month, int day, int courseCount)
     {
         super(firstName,lastName,address,phoneNumber,year,month,day);
+        super.setCourseCount(courseCount);
     }
     
     /**
@@ -19,6 +20,14 @@ public class PartTimeStudent extends Student
     @Override
     public double calculateCourseFee()
     {
+        if(super.getCourseCount() >0 && super.getCourseCount() < 2)
+        {
+            super.setCourseFee(700.00);
+        }
+        else if(super.getCourseCount() >0 && super.getCourseCount() < 2)
+        {
+            super.setCourseFee(800.00);
+        }
         return super.getCourseFee()*super.getCourseCount();
     }
 }
