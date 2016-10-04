@@ -29,8 +29,8 @@ public abstract class Student
         this.phoneNumber = phoneNumber;
         this.birthDate = new GregorianCalendar();
         this.birthDate.set(Calendar.YEAR, year);
-        this.birthDate.set(Calendar.MONTH, month);
-        this.birthDate.set(Calendar.DAY_OF_MONTH, day);
+        this.birthDate.set(Calendar.MONTH, month-1);
+        this.birthDate.set(Calendar.DATE, day);
         
         this.courseFee = 500.00;
     }
