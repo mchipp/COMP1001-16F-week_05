@@ -39,20 +39,23 @@ public abstract class Student
      * Method to calculate the total course fee
      * @return 
      */
-    public double calculateCourseFee()
-    {
-        return courseFee*courseCount;
-    }
+    public abstract double calculateCourseFee();
     
+    /**
+     * Method to get the course fee
+     * @return 
+     */
     public double getCourseFee()
     {
         return courseFee;
     }
     
+    /**
+     * Method to set the course fee
+     * @return 
+     */
     public int getCourseCount()
     {
         return courseCount;
     }
-            
-    
 }

@@ -12,6 +12,10 @@ public class PartTimeStudent extends Student
         super(firstName,lastName,address,phoneNumber,year,month,day);
     }
     
+    /**
+     * Method to calculate the total course fee
+     * @return 
+     */
     @Override
     public double calculateCourseFee()
     {
